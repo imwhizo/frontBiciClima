@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Clima y Transporte Público en Bicicletas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        main {
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #fecha-seleccionada {
+            margin-bottom: 20px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Consulta de Clima y Transporte Público en Bicicletas</h1>
+    </header>
+    <main>
+        <div id="fecha-seleccionada">
+            <label for="fecha">Seleccionar fecha:</label>
+            <input type="date" id="fecha" name="fecha">
+        </div>
+        <button onclick="consultarDatos()">Consultar</button>
+        <!-- Aquí se mostrará la información del clima y del transporte público de bicicletas -->
+        <div id="resultado"></div>
+    </main>
+    <footer>
+        <p>© 2024 BiciClima - Universidad de Guadalajara</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
